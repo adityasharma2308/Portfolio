@@ -1,0 +1,212 @@
+html, body {
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b1b34; /* Dark blue background */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    min-height: 100vh;
+    color: #fff;
+    padding-left: 200px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+.content h1 {
+    font-size: 24px;
+    margin-bottom: -2%;
+    color: #ff5e5e; /* Further reduced margin */
+}
+
+.content h2 {
+    margin-bottom: -4%; /* Further reduced margin */
+    font-size: 60px;
+    opacity: 0.9;
+
+}
+
+.content p {
+    margin-bottom: 3%; /* Further reduced margin */
+    font-size: 55px;
+    opacity: 0.5;
+}
+
+
+.button-container{
+    position: relative;
+    z-index: 1;  
+   
+}
+.button-container .about-button {
+    padding: 10px 20px;  
+    border: 1px solid #ff5e5e;
+    background: none;
+    cursor: pointer;
+  
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;  
+    color: #ff5e5e;
+  
+    background-color: #0b1b34;
+    border-radius: 4px; 
+    
+    transition: transform 0.2s ease;
+}
+
+.button-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    z-index: -1;
+    background-color: #ff5e5e;
+    /* transition: transform 0.2s ease; */
+}
+
+.about-button:hover {
+    transform: translate(-5px, -5px); /* Move button slightly up and left */
+}
+
+
+.typing-text {
+    font-weight: bold;
+    border-right: 2px solid #fff;
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.7s step-end infinite;
+}
+/* Container for social links */
+/* Container for social links */
+.social-links {
+    position: fixed;
+    left: 50px;
+    bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Style for the social icon container */
+.social-icon {
+    position: relative;
+    width: 20px; /* Adjust the size of the icons */
+    height: 20px;
+}
+
+.social-icon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for both opacity and movement */
+}
+
+.default-icon {
+    opacity: 1; /* Default visibility */
+}
+
+.hover-icon {
+    opacity: 0; /* Initially hidden */
+}
+
+/* Hover effect */
+.social-icon:hover .default-icon {
+    opacity: 0; /* Hide default icon on hover */
+}
+
+.social-icon:hover .hover-icon {
+    opacity: 1; /* Show hover icon on hover */
+    transform: translateY(-5px); /* Moves the icon up slightly on hover */
+}
+
+
+/* Vertical line styling */
+.vertical-line {
+    position: fixed;
+    left: 60px;
+    bottom: 20px; /* Adjust this value to place the line below the icons */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 2px; /* Width of the vertical line */
+    height: 50px; /* Height of the vertical line */
+    background-color: #8a8a8a; /* Color of the vertical line */
+}
+
+
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+
+
+
+/* Initial background gradient for spotlight effect */
+body {
+    background: radial-gradient(circle at center, #0d253f, #0b1b34 70%);
+    transition: background 0.1s ease;
+}
+
+.About-header {
+    display: flex;
+    align-items: center; /* Center the line vertically with the text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.About-header h1 {
+    margin: 0; /* Remove default margin */
+    padding-right: 20px; /* Space between text and line */
+    color: #fff; /* Text color */
+}
+
+.About-header .line {
+    width: 130px; /* Adjust this value to control the length of the line */
+    height: 2px; /* Line thickness */
+    background-color: #ff5e5e; /* Line color */
+    margin-left: 20px; /* Space between text and line */
+}
+.About {
+    color: #fff;
+    padding-left: 200px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+
+.About p {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.About-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.About-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.About-image {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.About-image .image-top {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust based on your desired image size */
+    object-fit: contain;
+    padding-right: 200px;
+}

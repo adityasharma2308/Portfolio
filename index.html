@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navigation bar styles */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0b1b34;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: #ff5e5e;
+            color: #fff;
+        }
+        
+        /* Adjust padding for content to avoid overlap with navigation */
+        .content {
+            padding-top: 60px; /* Adjust based on nav bar height */
+        }
+    </style>
+</head>
+<body>
+    <header class="nav-bar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <div id="home" class="content">
+        <h1>Hi, my name is</h1>
+        <h2>Aditya Sharma.</h2>
+        <p>I'm a <span class="typing-text"></span></p>
+        <div class="button-container">
+            <button href="#about" class="about-button" >Learn more about me!</button>
+        </div>
+    </div>
+
+    <div id="about" class="About">
+        <div class="About-header">
+            <h2>About Me</h2>
+            <div class="line"></div>
+        </div>
+        <div class="About-content">
+            <div class="About-text">
+                <p>Hello! I am Aditya Sharma, currently pursuing a BTech in Electronics and Telecommunication (ENTC) at Bharati Vidyapeeth College of Engineering Pune. I am deeply interested in Machine Learning and its applications, especially in the context of SwiftUI and iOS development.</p>
+                <p>I am currently working on several projects, including developing authentication features using APIs and exploring OTP verification in SwiftUI. I also work with Java and Python, utilizing tools like Google Colab and Visual Studio.</p>
+                <p>Outside of my academic and professional pursuits, I am involved in a startup called HardCopy, which aims to address challenges faced by college students in the Retail Printing Industry. Additionally, I am passionate about improving my English fluency and enhancing my website design skills.</p>
+            </div>
+            <div class="About-image">
+                <div class="image-top">
+                    <img src="assets/portrait.png" alt="Top Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <div id="portfolio" class="more-info">
+        <h2>Portfolio</h2>
+        <p>Here you can showcase your projects and work samples.</p>
+    </div>
+
+    <div id="contact" class="more-info">
+        <h2>Contact</h2>
+        <p>Provide your contact details or a contact form here.</p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://github.com/" target="_blank" class="social-icon github">
+            <img src="assets/github.png" alt="GitHub" class="default-icon">
+            <img src="assets/github-red.png" alt="GitHub" class="hover-icon">
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="social-icon twitter">
+            <img src="assets/twitter.png" alt="Twitter" class="default-icon">
+            <img src="assets/twitter-red.png" alt="Twitter" class="hover-icon">
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="social-icon linkedin">
+            <img src="assets/linkedin.png" alt="LinkedIn" class="default-icon">
+            <img src="assets/linkedin-red.png" alt="LinkedIn" class="hover-icon">
+        </a>
+    </div>
+    <div class="vertical-line"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
